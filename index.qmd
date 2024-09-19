@@ -24,7 +24,10 @@ $$
 \end{aligned}
 $$
 
-Here, $\beta$ represents the transmission rate, and $\gamma$ is the recovery rate.
+where, 
+
+- $\beta$ represents the transmission rate;
+- $\gamma$ represents the recovery rate.
 
 ## Setting up the environment
 
@@ -204,26 +207,25 @@ plot_phase_space <- function(
   checkmate::assert_number(theta, lower = 0)
   checkmate::assert_number(phi, lower = 0)
 
-  colors <- gg_color_hue(length(beta))
   plot <-ggplot2::ggplot()
   
-  for (j in seq_along(beta)) {
+  for (j in beta) {
     data_j <- 
-      sir(s, i, r, beta[j], lambda, from, to, by) |>
+      sir(s, i, r, j, lambda, from, to, by) |>
       magrittr::extract2("data") |>
-      dplyr::mutate(color = as.character(beta[j]))
+      dplyr::mutate(color = as.character(j))
     
     plot <-
       plot +
       ggplot2::geom_path(
         data = data_j,
         ggplot2::aes(x = r, y = s, color = color),
-        linewidth = 1
+        linewidth = 0.75
       )
   }
   
   colors <- gg_color_hue(length(beta))
-  names(colors) <- beta |> as.character()
+  names(colors) <- as.character(beta)
   
   plot <-
     plot +

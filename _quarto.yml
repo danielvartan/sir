@@ -1,0 +1,58 @@
+editor: source
+
+execute:
+  cache: false
+  freeze: false
+
+project:
+  type: website
+  output-dir: docs
+  render: [index.qmd]
+
+title: "SIR Model"
+author: "Daniel Vartanian"
+  # name: "Daniel Vartanian"
+  # orcid: 0000-0001-7782-759X
+  # url: https://linktr.ee/danielvartan
+  # email: danvartan@gmail.com
+  # corresponding: true
+  # affiliation:
+  #   - name: University of São Paulo
+  #   - Country: Brazil
+  #   - url: https://www.usp.br
+keyword: >
+  sir model, epidemiology, disease dynamics, compartmental models,
+  nonlinear differential equations, transmission rate, recovery rate,
+  r programming, numerical simulations, ordinary differential equations,
+  dynamical systems, public health, simulation, complex systems
+date: today
+date-format: "YYYY-MM-DD"
+
+website:
+  repo-url: https://github.com/danielvartan/sir/
+  site-url: https://danielvartan.github.io/sir/
+  issue-url: https://github.com/danielvartan/sir/issues/
+  repo-branch: main
+  repo-actions: [edit, issue]
+  search: false
+  navbar:
+    title: false
+    background: dark
+    left:
+      - icon: github
+        href: https://github.com/danielvartan/sir
+        aria-label: GitHub
+
+format:
+  html:
+    locale: en
+    language: en-us
+    code-fold: show
+    code-link: true
+    tbl-cap-location: top
+    callout-appearance: simple
+    csl: csl/english-apa-author-date.csl
+    theme: [cosmo, scss/web.scss]
+
+google-scholar: false
+bibliography: references.bib

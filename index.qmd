@@ -12,7 +12,7 @@ source(here::here("R/quarto-setup.R"))
 
 ## Overview
 
-This document focuses on demonstrating the [SIR model](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology), originally introduced by Kermack and McKendrick in [-@kermack1927]. The SIR model is a foundational framework in epidemiology, designed to analyze the spread of infectious diseases by categorizing the population into three compartments: Susceptible (S), Infected (I), and Recovered (R).
+This document focuses on illustrating the [SIR model](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology), originally introduced by Kermack and McKendrick in [-@kermack1927]. The SIR model is a foundational framework in epidemiology, designed to analyze the spread of infectious diseases by categorizing the population into three compartments: Susceptible (S), Infected (I), and Recovered (R).
 
 The dynamics of the model are represented by the following set of first-order, nonlinear differential equations:
 
